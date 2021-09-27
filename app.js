@@ -20,12 +20,14 @@ if (!URL) {
 async function main() {
   const html = await axios.get(URL);
   const dom = new JSDOM(html.data);
-
+  const animeTitle = dom.window.document.querySelector(
+    ".anime-details-title"
+  ).textContent;
+  console.log(animeTitle);
   if (urlType(URL) === "anime") {
     console.log("it an anime");
     const allEps = await anScraper(dom, QUALITY);
-
-    fs.appendFile("Anime_final_links.txt", allEps, function (err) {
+    fs.writeFile(`./${animeTitle}.txt`, allEps.join("\n"), function (err) {
       if (err) throw err;
       console.log("Saved!");
     });
@@ -35,7 +37,12 @@ async function main() {
     const epLink = getLinks(dom, QUALITY);
     const epDownLink = await getDownLink(epLink);
 
-    fs.writeFileSync("./Final_Episode_Link.txt", epDownLink);
+    const episodeTitle =
+      dom.window.document.querySelector(".container h3").textContent;
+
+    fs.mkdir(`./${animeTitle}`, (err) => console.log(err));
+
+    fs.writeFileSync(`./${animeTitle}/${episodeTitle}.txt`, epDownLink);
   }
   if (urlType(URL) !== "episode" && urlType(URL) !== "anime")
     return "provide a vilde link";
