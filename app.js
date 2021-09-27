@@ -40,9 +40,7 @@ async function main() {
     const episodeTitle =
       dom.window.document.querySelector(".container h3").textContent;
 
-    fs.mkdir(`./${animeTitle}`, (err) => console.log(err));
-
-    fs.writeFileSync(`./${animeTitle}/${episodeTitle}.txt`, epDownLink);
+    fs.writeFileSync(`./${episodeTitle}.txt`, epDownLink);
   }
   if (urlType(URL) !== "episode" && urlType(URL) !== "anime")
     return "provide a vilde link";
