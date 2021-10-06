@@ -6,7 +6,7 @@ const baseDomain = "https://ww.anime4up.com/";
 function urlType(url) {
   if (url.startsWith(`${baseDomain}anime`)) return "anime";
   if (url.startsWith(`${baseDomain}episode`)) return "episode";
-  else return "provide a vild url ( episode or anime )";
+  else return "provide a valid url ( episode or anime )";
 }
 
 function getLinks(dom, quality) {
