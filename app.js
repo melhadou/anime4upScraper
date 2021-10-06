@@ -43,6 +43,6 @@ async function main() {
     fs.writeFileSync(`./${episodeTitle}.txt`, epDownLink);
   }
   if (urlType(URL) !== "episode" && urlType(URL) !== "anime")
-    return "provide a vilde link";
+    return "provide a valide link";
 }
 main();
