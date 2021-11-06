@@ -30,36 +30,45 @@ npm install
    - 1080
    
   ## Scrape An Anime:
-  
-   ### command structure:
-  
-   ``` console
-   node app.js ANIME_LINK VIDEO_QUALITY
-   ```
-  
-   ### command Example:
-   
-   ``` console
-   node app.js https://ww.anime4up.com/anime/boku-no-hero-academia-5th-season/ 1080
-   ```
-   
-   ### Live Example:
-  <img src="https://i.ibb.co/jzkrGRS/image.png" alt="image" border="0" />
-  
- ## Scrap a Single Ep:
+
   ### command structure:
-  
-   ``` console
-   node app.js EP_LINK VIDEO_QUALITY
-   ```
-  
-   ### command Example:
-   
-   ``` console
-  node app.js https://ww.anime4up.com/episode/boku-no-hero-academia-5th-season-%d8%a7%d9%84%d8%ad%d9%84%d9%82%d8%a9-1/ 720
-   ```
-   
-   ### Live Example:
+
+  ```console
+  node app.js ANIME_LINK VIDEO_QUALITY
+  ```
+
+  ### command Example:
+
+  ```console
+  node app.js https://ww.anime4up.com/anime/boku-no-hero-academia-5th-season/ 1080
+  ```
+
+  ### Live Example:
+
+  <img src="https://i.ibb.co/jzkrGRS/image.png" alt="image" border="0" />
+
+## Scrap a Single Ep:
+
+### command structure:
+
+```console
+node app.js EP_LINK VIDEO_QUALITY
+```
+
+### command Example:
+
+```console
+node app.js https://ww.anime4up.com/episode/boku-no-hero-academia-5th-season-%d8%a7%d9%84%d8%ad%d9%84%d9%82%d8%a9-1/ 720
+```
+
+### Live Example:
+
 <img src="https://i.ibb.co/wYBJ3Qv/image.png" alt="image" border="0" />
 
 # You Will Find A file With All The eps or one ep.
+
+## Made by
+
+[@LeSpank](https://github.com/LeSpank)
+
+[@Sra9Ziit](https://github.com/Sra9Ziit)
