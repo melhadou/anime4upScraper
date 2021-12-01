@@ -1,7 +1,7 @@
 const axios = require("axios");
 const { JSDOM } = require("jsdom");
 
-const baseDomain = "https://ww.anime4up.com/";
+const baseDomain = "https://w1.anime4up.com/";
 
 function urlType(url) {
   if (url.startsWith(`${baseDomain}anime`)) return "anime";
@@ -27,7 +27,7 @@ function getLinks(dom, quality) {
 function anLinks(dom) {
   const eps = [];
   const nodeList = dom.window.document.querySelectorAll(
-    ".episodes-card-title a[href^='https://ww.anime4up.com/episode/']"
+    ".episodes-card-title a[href^='https://w1.anime4up.com/episode/']"
   );
   nodeList.forEach((el) => {
     eps.push(el.href);
@@ -39,7 +39,7 @@ function getDownLink(url) {
     method: "get",
     url: url,
     headers: {
-      referer: "https://ww.anime4up.com/",
+      referer: "https://w1.anime4up.com/",
       responseType: "stream",
     },
     maxContentLength: 1,
