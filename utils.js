@@ -1,8 +1,6 @@
 const axios = require("axios");
 const { JSDOM } = require("jsdom");
-
 const baseDomain = "https://w1.anime4up.com/";
-
 function urlType(url) {
   if (url.startsWith(`${baseDomain}anime`)) return "anime";
   if (url.startsWith(`${baseDomain}episode`)) return "episode";
@@ -45,7 +43,7 @@ function getDownLink(url) {
     maxContentLength: 1,
   };
 
-  const epHtml = axios(config).catch(function (error) {
+  const epHtml = axios(config).catch(function(error) {
     return error.request.res.responseUrl;
   });
   return epHtml;
